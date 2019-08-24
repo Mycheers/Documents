@@ -1,0 +1,14 @@
+登录到mysql查看binlog
+只查看第一个binlog文件的内容
+show binlog events;
+查看指定binlog文件的内容
+show binlog events in 'mysql-bin.000002';
+查看当前正在写入的binlog文件
+show master status\G
+获取binlog文件列表
+show binary logs;
+获取当前时间戳
+SELECT unix_timestamp(now());
+
+show databases;
+select host,user from mysql.user;

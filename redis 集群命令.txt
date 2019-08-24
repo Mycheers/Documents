@@ -1,0 +1,18 @@
+cluster create 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005 127.0.0.1:7006
+
+:1,$ s/7001/7006/g
+src/redis-server 7001/redis.conf
+
+./src/redis-cli --cluster create 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005 127.0.0.1:7006   --cluster-replicas 1 
+./src/redis-cli --cluster create -a test1 172.17.24.102:7001 172.17.24.102:7002 172.17.24.102:7003 172.17.24.102:7004 172.17.24.102:7005 172.17.24.102:7006  --cluster-replicas 1 
+
+./redis-cli -h 127.0.0.1 -p 7001
+./redis-cli -h 120.79.36.202 -p 7001 -a test1
+bind 172.17.24.102 127.0.0.1
+
+
+config set masterauth test1
+config set requirepass test1
+config rewrite 
+# 集群启动 
+./redis-cli -c -p 7001

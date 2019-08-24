@@ -1,0 +1,37 @@
+描述									Eclipse					Intellij
+代码补全								Ctrl+space				Ctrl+space
+打开类或者接口 （两个IDE都支持使用“驼峰字符”前缀的方式来过滤查找列表，进而轻松完成搜索；比如：可以使用“PoDI”来检索PodcastDaoImpl类）
+										Ctrl+Shift +T			Ctrl+N
+快速打开文件/资源						Ctrl+Shift+R			Shift+F6
+打开声明								F3						Ctrl+B
+查看Javadoc/详情						鼠标滑过（F2聚焦）		Ctrl+Q
+快速修复								Alt+1					Alt+Enter
+导入所有须要的包						Ctrl+Shift+O			Ctrl+Alt+O
+保存文件/保存所有文件					Ctrl+S/Ctrl+Shift+S		自动保存
+当前文件快速定位弹出框（成员，方法）	Ctrl+O					Ctrl+F12
+源码（生成getter和setter，构造器等）	Alt+Up/Alt+Down			Alt+Insert
+当前语法补全
+if，do-while，try-catch，return（方法调用）等正确的语法构造（如：添加括号）
+																Ctrl+Shift+Enter
+抽取常量								Ctrl+1->抽取常亮		Ctrl+Alt+C
+抽取变量								Ctrl+1->抽取变量		Ctrl+Alt+V
+增加、删除以及移动数行代码	 
+在当前插入符添加一行					Shift+Enter				Shift+Enter
+复制一行或代码段						Ctrl+Alt+Up/Down		Ctrl+D
+删除一行代码							Ctrl+Y					Ctrl+Y
+选中代码向上或者向下移动				Alt+Up/Down				Shift+Alt+Up/Down
+查找/搜索	 	 
+查找类/变量在工作区域工程中使用			Ctrl+Shift+G			Alt+F7
+在工程或者工作区中查找文本				Ctrl+H (选择文件搜索)	Ctrl+Shift+F
+导航	 	 
+回退（撤消最后导航操作）				Alt+Left				Ctrl+Alt+Left
+标签/编辑之间的导航						Ctrl+Page Down/Up		Alt+Left/Alt+Right
+跳转某一行								Ctrl+L					Ctrl+G
+导航到最近的文件						Ctrl + E				Ctrl + E
+在编辑器之间快速切换方法	 			Alt + Up / Down
+调试	 	 
+运行一行								F6						F8
+进入下一次计算							F5						F7
+运行到下一个断点						F7						Shift+F8
+回复运行								F8						F
+										Ctrl + Alt + M
