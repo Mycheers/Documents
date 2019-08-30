@@ -166,6 +166,15 @@ cd /usr/local/otter/node/bin/
 _考虑节点可能面临挂掉风险，此处配置多节点进行负载，保证高可用_
 ### 安装aria2
 
+- 安装gcc 5.2
+  ```
+  yum install centos-release-scl -y
+  yum install devtoolset-4-toolchain -y
+  scl enable devtoolset-4 bash
+  gcc --version
+```
+ - aria2
+
   ```
   wget https://nchc.dl.sourceforge.net/project/aria2/stable/aria2-1.19.0/aria2-1.19.0.tar.gz
 
@@ -176,14 +185,6 @@ _考虑节点可能面临挂掉风险，此处配置多节点进行负载，保�
   mv aria2-1.19.0/ ../aria2C
   rm -rf /usr/local/otter/aria2/
   cd /usr/local/otter/aria2C
-  ```
-
-- 安装gcc 5.2
-  ```
-  yum install centos-release-scl -y
-  yum install devtoolset-4-toolchain -y
-  scl enable devtoolset-4 bash
-  gcc --version
 
   ./configure
 

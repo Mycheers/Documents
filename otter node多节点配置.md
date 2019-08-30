@@ -5,7 +5,7 @@
 3. 解压到指定目录 tar zxvf node.deployer-4.2.17.tar.gz -C /usr/local/otter/node02
 4. tar zxvf node.deployer-4.2.17.tar.gz -C /usr/local/otter/node03
 5. vim node02/conf/otter.properties  修改manager ip
-	1. 支持多个ip	
+	1. 支持多个ip
 6. vim node03/conf/otter.properties  修改manager ip
 7. vim /root/.bash_profile
 8. 添加aria2 安装路径到path    /usr/local/otter/aria2-1.19.0/src
@@ -56,6 +56,14 @@
 ### otter无缝取代主从
 1. 步骤1:mysql 主从异常,断开主从开启otter同步  正常同步  
 2. 步骤2:关闭otter ，删除从库差异数据，开启主从同步成功
-3. 步骤3:mysql 主从异常,不操作主从开启otter同步  正常同步 
+3. 步骤3:mysql 主从异常,不操作主从开启otter同步  正常同步
 
+### 部分数据同步
+1. 同步字段必须包含源表主键
+2. 目标表最好将同步过来的主键做唯一键限制
+3. 如果同步的主键被修改，本行数据也会根据主键修改
+4. 同步原来就是依据主键更新
 
+### otter表配置支持正则
+
+1. 如果使用正则配置多个表使用同一个通道,如果其中一个表出现异常会导致channel挂起，整个同步终止
